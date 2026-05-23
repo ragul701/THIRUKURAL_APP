@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<title>முப்பால் பகுப்பு</title>
+
+<style>
+
+/* background */
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#141e30,#243b55);
+    font-family:Arial;
+}
+
+/* main box */
+.box{
+    width:380px;
+    height:500px;
+    background:rgba(255,255,255,0.1);
+    backdrop-filter:blur(12px);
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.5);
+    padding:20px;
+
+    overflow-y:auto;   /* 🔥 SCROLL ENABLE */
+}
+
+/* title */
+h1{
+    text-align:center;
+    color:white;
+    margin-bottom:20px;
+    background:linear-gradient(90deg,#ff512f,#dd2476,#24c6dc);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/* section text */
+p{
+    color:white;
+    text-align:center;
+    font-size:14px;
+    opacity:0.8;
+}
+
+/* buttons */
+a{
+    text-decoration:none;
+}
+
+button{
+    width:100%;
+    margin:12px 0;
+    padding:15px;
+    font-size:18px;
+    font-weight:bold;
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    color:white;
+
+    background:linear-gradient(270deg,#ff512f,#dd2476,#24c6dc,#514a9d);
+    background-size:300% 300%;
+    animation:move 4s ease infinite;
+
+    transition:0.3s;
+}
+
+/* hover */
+button:hover{
+    transform:scale(1.05);
+    box-shadow:0 5px 20px rgba(0,0,0,0.4);
+}
+
+/* animation */
+@keyframes move{
+    0%{background-position:0%;}
+    50%{background-position:100%;}
+    100%{background-position:0%;}
+}
+
+/* scrollbar design */
+.box::-webkit-scrollbar{
+    width:6px;
+}
+
+.box::-webkit-scrollbar-thumb{
+    background:linear-gradient(#ff512f,#dd2476);
+    border-radius:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1>📘 முப்பால் பகுப்பு</h1>
+
+    <p>திருக்குறள் மூன்று பகுதிகளாகப் பிரிக்கப்பட்டுள்ளது</p>
+
+    <!-- BUTTON LINKS -->
+    <a href="aram.html">
+        <button>🌿 அறத்துப்பால்</button>
+    </a>
+
+    <a href="porul.html">
+        <button>💰 பொருட்பால்</button>
+    </a>
+
+    <a href="inbam.html">
+        <button>❤️ இன்பத்துப்பால்</button>
+    </a>
+
+    <!-- EXTRA INFO (scroll effect show) -->
+    <p>
+        👉 அறம்:நல்ல வாழ்க்கை<br>
+        👉 பொருள்:வெற்றிகரமான வாழ்க்கை<br>
+        👉 இன்பம்:மகிழ்ச்சியான வாழ்க்கை
+    </p>
+
+    <p>
+        இந்த மூன்று பகுதிகளும் மனித வாழ்க்கையின் முழு தத்துவத்தை விளக்குகிறது.
+    </p>
+
+</div>
+
+</body>
+</html>

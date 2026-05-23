@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* 🌙 Dark Gradient Background */
+body {
+    height: 100vh;
+    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(135deg, #0daada, #50b814, #db07ca);
+    animation: bgMove 8s infinite alternate;
+    color: #180202;
+}
+
+/* 🎬 Background animation */
+@keyframes bgMove {
+    0% {
+        background: linear-gradient(135deg, #3386aa, #eb24c9, #df0a0a);
+    }
+    100% {
+        background: linear-gradient(135deg, #159646, #055dc2, #82a30b);
+    }
+}
+
+/* Main layout */
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Left side (Image) */
+.left {
+    width: 50%;
+    background: url("images/thiruvalluvar.png") no-repeat center;
+    background-size: cover;
+    animation: fadeIn 2s ease-in;
+}
+
+/* Right side (Content) */
+.right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+
+    /* 🌫️ Dark glass effect */
+    background: rgba(171, 236, 17, 0.4);
+    backdrop-filter: blur(12px);
+
+    color: #fff;
+    animation: slideIn 1.5s ease;
+}
+
+/* Text styles */
+.right h1 {
+    font-size: 35px;
+    margin-bottom: 20px;
+    animation: fadeUp 1s ease;
+}
+
+.right p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    animation: fadeUp 1.2s ease;
+}
+
+/* 🔥 Buttons */
+button {
+    padding: 12px 25px;
+    border: none;
+    background: linear-gradient(45deg, #ff512f, #dd2476);
+    color: rgb(29, 2, 2);
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+    margin: 10px 0;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 80, 80, 0.6);
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left, .right {
+        width: 100%;
+        height: 50vh;
+    }
+}
+
+/* About section */
+.about-container {
+    padding: 40px;
+    text-align: center;
+    background: linear-gradient(135deg, #06e751, #07c7e9);
+    color: rgb(19, 1, 1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-height: 100vh;
+}
+
+.about-container h1 {
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+
+.card {
+    background: rgba(6, 214, 204, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    width: 60%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    background: #2a5298;
+}
+
+/* 🎬 Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+body {
+    text-align: center;
+}
